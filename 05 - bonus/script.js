@@ -10,8 +10,28 @@ const name = 'Mario';
 
 // Dichiara la funzione qui.
 
+function salutoInBaseAlMomentoDellaGiornata (nome){
+
+let orario = new Date().getHours(); //da approfondire
+let message = ""
+
+if (orario <= 13 ){
+    message = `Buongiorno ${nome}`;
+} else if (orario <= 17){
+    message = `Buon pomeriggio ${nome}`;
+
+} else {
+    message = `Buonasera ${nome}`;
+}
+
+return message
+
+
+}
 
 // Invoca la funzione qui e stampa il risultato in console
+
+console.log(salutoInBaseAlMomentoDellaGiornata(name));
 
 
 
